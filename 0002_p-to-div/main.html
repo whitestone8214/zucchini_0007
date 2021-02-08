@@ -1,0 +1,56 @@
+<!--
+	Copyright (C) 2021 Minho Jo <whitestone8214@gmail.com>
+	
+	License: CC-BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) (license.txt)
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+	<head><meta charset="UTF-8"></head>
+	<body></body>
+	<script type="text/javascript">
+		// Overall document settings
+		document.title = "0002"
+		document.body.style.backgroundColor = "#303030"
+		
+		// Necessary units
+		var _widthPage = window.innerWidth
+		var _heightPage = window.innerHeight
+		var _spanX = _widthPage / 32
+		var _spanY = _heightPage / 32
+		var _span = (_spanX < _spanY) ? _spanX : _spanY
+		var _marginX = _widthPage - (_spanX * 32)
+		var _marginY = _heightPage - (_spanX * 32)
+		
+		// Functions
+		function div_type0(contents) {
+			var _div = document.createElement("div")
+			_div.innerHTML = contents
+			_div.style.position = "absolute"
+			_div.style.left = _spanX + "px"
+			_div.style.width = (_spanX * 30) + "px"
+			_div.style.fontSize = (_span * 2) + "px"
+			_div.style.color = "#cfcfcf"
+			
+			return _div
+		}
+		
+		// Body
+		document.body.appendChild(div_type0("이웃 연월(連月)의 왕비 미(湄)가 아이를 낳아 이름을 설백(雪白)이라 지었다. 그로부터 7년 후 미가 병으로 죽고 얼마 지나지 않아 감(橄)이라는 여자가 연월의 새 왕비가 되었다."))
+		document.body.appendChild(div_type0("감이 왜 설백을 죽이려 했는가에 대해서는 학자들 사이에서도 논란이 있으나 감이 설백을 죽이려 했음은 사실이다. 감은 사냥꾼을 고용해 설백을 숲으로 데려가 죽이고 증거로 그 목을 가져올 것을 요구했다. 사냥꾼은 설백을 숲으로 데려갔다. 하지만 죽이지는 않고 멀리 도망보낸 다음 감에게 돌아가지 않고 국경을 넘어 우리 비지(緋枝)로 왔다."))
+		document.body.appendChild(div_type0("설백은 숲을 헤매다 오두막을 발견하고 그곳의 주인인 일곱 명의 난쟁이들과 함께 살게 되었다."))
+		document.body.appendChild(div_type0("10년 뒤 감은 정찰대로부터 설백이 살아있다는 사실과 그녀가 있는 곳을 전해 들었다. 감은 직접 설백을 찾아가 그녀에게 독이 든 사과를 먹이고 궁으로 돌아갔다. 설백은 잠시 후 쓰러졌고 난쟁이들은 설백을 관에 넣었다."))
+		document.body.appendChild(div_type0("그때 우리 비지의 왕자 초(椒)가 그 근처를 지나다 그것을 발견했다. 그는 난쟁이들에게 가 설백을 넘겨받고 설백에게 입을 맞추었다. 설백은 깨어났다."))
+		document.body.appendChild(div_type0("이후 설백은 우리 비지의 공주가 되어 오래오래 행복하게 살았다."))
+		
+		// Layout
+		var _y = _spanY
+		for (var _nthChild = 0; _nthChild < document.body.children.length; _nthChild++) {
+			var _child = document.body.children[_nthChild]
+			_child.style.top = _y + "px"
+			_y += _child.offsetHeight + _spanY
+		}
+	</script>
+</html>
